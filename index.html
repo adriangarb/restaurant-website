@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <title>RESTAURANT</title>
+  </head>
+  <body>
+    <div id="preloader">
+      <div class="overlay-1"></div>
+      <div class="overlay-2"></div>
+      <div id="percent">1%</div>
+      <div id="bar">
+        <div id="barconfrm"></div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="navbar">
+        <a href="#contact">RESERVATIONS</a>
+        <h2 class="site-logo">Restaurant<br />Name</h2>
+        <div class="menu-toggle">
+          <div id="menu-toggle-btn">
+            <span></span>
+          </div>
+        </div>
+      </div>
+      <div id="nav-container" class="nav-container">
+        <div class="nav">
+          <div class="col flex"></div>
+          <div class="col-links">
+            <div class="nav-link">
+              <a href="#">Home</a>
+              <div class="nav-item-wrapper"></div>
+            </div>
+            <div class="nav-link">
+              <a href="#menu">Menu</a>
+              <div class="nav-item-wrapper"></div>
+            </div>
+            <div class="nav-link">
+              <a href="#one">Gallery</a>
+              <div class="nav-item-wrapper"></div>
+            </div>
+            <div class="nav-link">
+              <a href="#team">Team</a>
+              <div class="nav-item-wrapper"></div>
+            </div>
+          </div>
+        </div>
+        <div class="nav-footer">
+          <div class="links">
+            <a href="#">Privacy policy</a>
+            <a href="#">Cookie policy</a>
+            <a href="#">Terms and conditions</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <nav class="navbar">
+      <div>barras</div>
+      
+    </nav> -->
+    <main class="main" id="main">
+      <h1>A Taste of Santorini</h1>
+      <div class="main__scrollDown">
+        <h6>DESLIZA</h6>
+        <div class="main__scrollDown__arrow"></div>
+      </div>
+    </main>
+    <section class="quote">
+      <p>
+        Perched above the Aegean,
+        <span class="quote__restaurant_name">Restaurant Title </span>blends
+        traditional Greek flavors with modern touches, using the freshest
+        ingredients <span class="quote__restaurant_name">Santorini </span>has to
+        offer.
+      </p>
+    </section>
+    <section class="menu" id="menu">
+      <h3>Menu</h3>
+      <div class="menu-container">
+        <section class="menu-section">
+          <div class="menu-texts">
+            <h2>Antipasti (Appetizers)</h2>
+            <div class="menu-item">
+              <p>Bruschetta al Pomodoro</p>
+              <div class="menu-bar"></div>
+              <span>$9</span>
+            </div>
+            <p class="description">
+              Grilled ciabatta topped with ripe tomatoes, fresh basil, garlic,
+              and extra virgin olive oil.
+            </p>
+            <div class="menu-item">
+              <p>Insalata Caprese</p>
+              <div class="menu-bar"></div>
+              <span>$13</span>
+            </div>
+            <p class="description">
+              Slices of ripe tomatoes and creamy buffalo mozzarella, drizzled
+              with balsamic glaze and fresh basil.
+            </p>
+
+            <div class="menu-item">
+              <p>Calamari Fritti</p>
+              <div class="menu-bar"></div>
+              <span>$15</span>
+            </div>
+            <p class="description">
+              Lightly breaded and fried calamari rings served with marinara
+              sauce for dipping.
+            </p>
+
+            <div class="menu-item">
+              <p>Zuppa del Giorno</p>
+              <div class="menu-bar"></div>
+              <span>$8</span>
+            </div>
+            <p class="description">Soup of the Day.</p>
+          </div>
+          <div class="image-container">
+            <div class="image-box">
+              <img src="asset/menu1.jpg" />
+            </div>
+          </div>
+        </section>
+
+        <section class="menu-section">
+          <div class="menu-texts">
+            <h2>Primi Piatti (First Courses)</h2>
+            <div class="menu-item">
+              <p>Spaghetti Carbonara</p>
+              <div class="menu-bar"></div>
+              <span>$20</span>
+            </div>
+            <p class="description">
+              Classic Roman pasta dish with pancetta, eggs, Parmigiano-Reggiano
+              cheese, and black pepper.
+            </p>
+
+            <div class="menu-item">
+              <p>Risotto ai Funghi</p>
+              <div class="menu-bar"></div>
+              <span>$23</span>
+            </div>
+            <p class="description">
+              Creamy Arborio rice cooked with mixed mushrooms, white wine,
+              garlic, and Parmesan cheese.
+            </p>
+
+            <div class="menu-item">
+              <p>Gnocchi alla Sorrentina</p>
+              <div class="menu-bar"></div>
+              <span>$18</span>
+            </div>
+            <p class="description">
+              Potato dumplings baked with tomato sauce, mozzarella cheese, and
+              fresh basil.
+            </p>
+
+            <div class="menu-item">
+              <p>Penne all'Arrabbiata</p>
+              <div class="menu-bar"></div>
+              <span>$18</span>
+            </div>
+            <p class="description">
+              Penne pasta tossed in a spicy tomato sauce with garlic, chili
+              flakes, and parsley.
+            </p>
+          </div>
+          <div class="image-container">
+            <div class="image-box">
+              <img src="asset/menu2.jpg" />
+            </div>
+          </div>
+        </section>
+
+        <section class="menu-section">
+          <div class="menu-texts">
+            <h2>Secondi Piatti (Main Courses)</h2>
+            <div class="menu-item">
+              <p>Pollo al Limone</p>
+              <div class="menu-bar"></div>
+              <span>$29</span>
+            </div>
+            <p class="description">
+              Tender chicken breast sautéed in a lemon butter sauce, served with
+              roasted potatoes and seasonal vegetables.
+            </p>
+
+            <div class="menu-item">
+              <p>Salmone alla Griglia</p>
+              <div class="menu-bar"></div>
+              <span>$33</span>
+            </div>
+            <p class="description">
+              Grilled salmon filet topped with a tangy lemon-herb sauce,
+              accompanied by sautéed spinach and roasted cherry tomatoes.
+            </p>
+
+            <div class="menu-item">
+              <p>Vitello Marsala</p>
+              <div class="menu-bar"></div>
+              <span>$37</span>
+            </div>
+            <p class="description">
+              Veal scallopini cooked with Marsala wine, mushrooms, and shallots,
+              served with creamy Parmesan risotto.
+            </p>
+
+            <div class="menu-item">
+              <p>Lasagna al Forno</p>
+              <div class="menu-bar"></div>
+              <span>$29</span>
+            </div>
+            <p class="description">
+              Layers of homemade pasta, Bolognese sauce, creamy bechamel, and
+              melted mozzarella cheese, baked to perfection.
+            </p>
+          </div>
+          <div class="image-container">
+            <div class="image-box">
+              <img src="asset/menu3.jpg" />
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
+    <section class="gallery" id="one">
+      <div class="gallery__title">
+        <h3>Gallery</h3>
+      </div>
+      <div id="slider-inner">
+        <div class="slider" id="slider-one">
+          <div class="g-7 active">
+            <div class="img-wrapper">
+              <img src="asset/gallery1.jpg" alt="" />
+            </div>
+          </div>
+          <div class="g-7">
+            <div class="img-wrapper">
+              <img src="asset/gallery2.jpg" alt="" />
+            </div>
+          </div>
+          <div class="g-7">
+            <div class="img-wrapper">
+              <img src="asset/gallery3.jpg" alt="" />
+            </div>
+          </div>
+          <div class="g-7">
+            <div class="img-wrapper">
+              <img src="asset/gallery4.jpg" alt="" />
+            </div>
+          </div>
+          <div class="g-7">
+            <div class="img-wrapper">
+              <img src="asset/gallery5.jpg" alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="proxy-slider"></div>
+      </div>
+    </section>
+    <section class="team" id="team">
+      <div class="team__title">
+        <h3>Our team</h3>
+      </div>
+      <div class="team__container">
+        <div class="team__container__box">
+          <img src="asset/team1.jpg" alt="" />
+          <h5>Brayden Knoxwell</h5>
+          <p>Chef de Cuisine</p>
+        </div>
+        <div class="team__container__box">
+          <img src="asset/team2.jpg" alt="" />
+          <h5>Jaxon Merrick</h5>
+          <p>Executive chef</p>
+        </div>
+        <div class="team__container__box">
+          <img src="asset/team3.jpg" alt="" />
+          <h5>James Clear</h5>
+          <p>Sous Chef</p>
+        </div>
+      </div>
+    </section>
+    <section class="contact">
+      <div class="contact__main">
+        <div class="contact__main__logo">
+          <h2 class="site-logo">Restaurant<br />Name</h2>
+        </div>
+        <div class="contact__main__links">
+          <a href="#">RESERVATIONS</a>
+          <a href="#">ABOUT US</a>
+          <a href="#">MENU</a>
+          <a href="#">OUR VALUES</a>
+          <a href="#">GALLERY</a>
+        </div>
+        <div class="contact__main__links">
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil,
+            quam?
+          </p>
+          <a href="#">636 45 45 45</a>
+          <a href="#">adrian@gmail.com</a>
+        </div>
+        <div class="contact__main__links">
+          <a href="#">adrian@gmail.com</a>
+          <a href="#">636 45 45 45</a>
+          <a href="#">adrian@gmail.com</a>
+        </div>
+      </div>
+      <div class="contact__footer">
+        <div class="contact__footer__container">
+          <p>© 2024 RESTAURAN NAME</p>
+          <button>BOOK NOW</button>
+        </div>
+      </div>
+    </section>
+    <script src="index.js"></script>
+  </body>
+</html>

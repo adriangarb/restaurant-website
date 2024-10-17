@@ -1,0 +1,863 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  background-color: #fff;
+  font-family: "Inter";
+  overflow-x: hidden;
+}
+
+#preloader {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  z-index: 10000;
+  flex-direction: column;
+}
+#preloader .overlay-1,
+#preloader .overlay-2 {
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+}
+#preloader .overlay-1 {
+  background-color: #faedcd;
+  z-index: 200;
+}
+#preloader .overlay-2 {
+  background-color: #023e8a;
+  z-index: 150;
+}
+#preloader #percent {
+  z-index: 250;
+  font-size: 40px;
+  color: #023e8a;
+}
+#preloader #bar {
+  z-index: 250;
+  width: 60%;
+  margin-top: 20px;
+}
+#preloader #barconfrm {
+  height: 5px;
+  z-index: 250;
+  width: 1%;
+  padding: 1px 0px;
+  border-radius: 50vw;
+  background-color: #023e8a;
+}
+
+.main {
+  height: 100vh;
+  width: 100%;
+  background-image: url("./asset/home.jpg");
+  background-repeat: no-repeat; /* Evitar que se repita */
+  background-size: cover; /* La imagen cubrirá todo el contenedor */
+  background-position: center; /* Centrar la imagen */
+  background-attachment: fixed;
+}
+.main h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Great Vibes";
+  font-size: 150px;
+  white-space: nowrap;
+  color: white;
+  text-align: center;
+}
+@media (max-width: 1200px) {
+  .main h1 {
+    font-size: 150px;
+    white-space: break-spaces;
+  }
+}
+@media (max-width: 768px) {
+  .main h1 {
+    font-size: 100px;
+    white-space: break-spaces;
+  }
+}
+@media (max-width: 460px) {
+  .main h1 {
+    font-size: 60px;
+    white-space: break-spaces;
+  }
+}
+.main__scrollDown {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: fit-content;
+  width: fit-content;
+  bottom: 20px;
+  left: 50%;
+  right: 50%;
+}
+.main__scrollDown h6 {
+  margin-bottom: 60px;
+  font-size: 12px;
+  font-weight: 300;
+  color: white;
+}
+.main__scrollDown__arrow {
+  width: 40px;
+  height: 40px;
+  bottom: 20px;
+  top: 50%;
+  margin: -20px 0 0 -20px;
+  -webkit-transform: rotate(45deg);
+  border-left: none;
+  border-top: none;
+  border-right: 2px #fff solid;
+  border-bottom: 2px #fff solid;
+  position: absolute;
+  left: 50%;
+}
+.main__scrollDown__arrow:before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  top: 50%;
+  margin: -10px 0 0 -10px;
+  border-left: none;
+  border-top: none;
+  border-right: 1px #fff solid;
+  border-bottom: 1px #fff solid;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-name: arrow;
+  position: absolute;
+  left: 50%;
+}
+@keyframes arrow {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-10px, -10px);
+  }
+}
+
+.quote {
+  padding: 150px 200px;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+@media (max-width: 1200px) {
+  .quote {
+    padding: 150px 200px;
+  }
+}
+@media (max-width: 990px) {
+  .quote {
+    padding: 100px 50px;
+  }
+}
+.quote__restaurant_name {
+  font-family: "Great Vibes";
+  font-size: 60px;
+}
+@media (max-width: 990px) {
+  .quote__restaurant_name {
+    font-size: 40px;
+  }
+}
+@media (max-width: 460px) {
+  .quote__restaurant_name {
+    font-size: 30px;
+  }
+}
+.quote p {
+  font-size: 30px;
+  line-height: 2.5em;
+  font-weight: 400;
+  margin: 0 auto;
+  text-align: center;
+}
+@media (max-width: 990px) {
+  .quote p {
+    font-size: 22px;
+  }
+}
+@media (max-width: 460px) {
+  .quote p {
+    font-size: 18px;
+  }
+}
+
+.menu h3 {
+  font-family: "Great Vibes";
+  font-size: 200px;
+  font-weight: 400;
+  padding: 0 80px;
+  color: #023e8a;
+  max-width: 1500px;
+  margin: 0 auto 80px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+@media (max-width: 990px) {
+  .menu h3 {
+    font-size: 130px;
+  }
+}
+@media (max-width: 460px) {
+  .menu h3 {
+    font-size: 90px;
+  }
+}
+.menu .menu-container {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 0 200px;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+@media (max-width: 1200px) {
+  .menu .menu-container {
+    padding: 0 80px;
+  }
+}
+@media (max-width: 990px) {
+  .menu .menu-container {
+    padding: 0px 50px;
+  }
+}
+.menu .menu-container .menu-section {
+  margin-bottom: 100px;
+  display: flex;
+  gap: 100px;
+  overflow: hidden;
+}
+@media (max-width: 990px) {
+  .menu .menu-container .menu-section {
+    flex-direction: column;
+    gap: 0;
+  }
+}
+.menu .menu-container .menu-section:nth-child(even) {
+  flex-direction: row-reverse;
+}
+.menu .menu-container .menu-section .menu-texts {
+  width: calc(100% - 50px);
+}
+@media (max-width: 990px) {
+  .menu .menu-container .menu-section .menu-texts {
+    width: 100%;
+  }
+}
+.menu .menu-container .menu-section .image-container {
+  width: calc(100% - 50px);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 990px) {
+  .menu .menu-container .menu-section .image-container {
+    display: none;
+  }
+}
+.menu .menu-container .menu-section .image-container .image-box {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+.menu .menu-container .menu-section .image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.menu h2 {
+  font-family: "Great Vibes";
+  font-size: 60px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #fff;
+  padding-bottom: 10px;
+  color: #023e8a;
+}
+@media (max-width: 768px) {
+  .menu h2 {
+    font-size: 50px;
+  }
+}
+.menu .menu-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  gap: 20px;
+  align-items: center;
+}
+.menu .menu-item .menu-bar {
+  width: 90%;
+  height: 1px;
+  background-color: #000000;
+}
+.menu .menu-item p {
+  font-size: 28px;
+  color: #000000;
+  font-weight: 300;
+  white-space: nowrap;
+}
+@media (max-width: 768px) {
+  .menu .menu-item p {
+    white-space: wrap;
+    max-width: 100%;
+    font-size: 18px;
+  }
+}
+.menu .menu-item span {
+  font-size: 18px;
+}
+@media (max-width: 768px) {
+  .menu .menu-item span {
+    font-size: 15px;
+  }
+}
+.menu .description {
+  font-size: 18px;
+  line-height: 1.5em;
+  color: #bbb;
+  margin-bottom: 20px;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: transparent;
+  position: absolute;
+  z-index: 120;
+}
+.container .navbar {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 3em;
+}
+@media (max-width: 460px) {
+  .container .navbar {
+    padding: 1em 2em;
+  }
+}
+.container .navbar:has(#menu-toggle-btn.active) {
+  background-color: transparent !important;
+  transition: all 0.5s ease-in-out;
+}
+.container .navbar.scrolled {
+  background-color: blue; /* Fondo azul cuando se hace scroll */
+}
+.container .navbar h2 {
+  font-family: "Great Vibes";
+  text-align: center;
+  font-size: 30px;
+  color: white;
+}
+@media (max-width: 460px) {
+  .container .navbar h2 {
+    display: none;
+  }
+}
+.container .navbar a {
+  border-bottom: 1px solid white;
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+}
+.container .site-logo {
+  font-size: 18px;
+  color: #000000;
+}
+.container .header {
+  position: absolute;
+  width: 100%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 80px;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: center;
+}
+.container #menu-toggle-btn {
+  margin-top: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20px;
+  width: 20px;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s;
+  z-index: 100000000;
+}
+.container span {
+  height: 2px;
+  background-color: #fff;
+  width: 24px;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  transition: all 0.3s;
+}
+.container span::before {
+  content: " ";
+  display: inline-block;
+  position: absolute;
+  height: 2px;
+  background-color: #fff;
+  transform: translateY(-4px);
+  width: 24px;
+  transition: all 0.3s;
+  top: -2px;
+}
+.container .active span {
+  background-color: #fff;
+  transform: rotate(45deg);
+}
+.container .active span::before {
+  top: unset;
+  background-color: #fff;
+  transform: rotate(-90deg);
+}
+.container .active:hover span::before {
+  top: unset;
+}
+.container #nav-container {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background: #000;
+  transition: all 0.3s;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+}
+.container .nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.container .flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 50%;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("./asset/nav.jpg"); /* Imagen de fondo con una capa oscura encima */
+  background-repeat: no-repeat; /* Evitar que se repita */
+  background-size: cover; /* La imagen cubrirá todo el contenedor */
+  background-position: center; /* Centrar la imagen */
+}
+@media (max-width: 460px) {
+  .container .flex {
+    display: none;
+  }
+}
+.container .col-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  gap: 80px;
+  height: 100vh;
+}
+@media (max-width: 460px) {
+  .container .col-links {
+    width: 100%;
+  }
+}
+.container .nav-link {
+  position: relative;
+}
+.container .nav-link a {
+  position: relative;
+  top: 60px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 30px;
+  font-weight: lighter;
+  position: relative;
+}
+.container .nav-link a::after {
+  z-index: 400;
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px; /* La línea aparecerá justo debajo del texto */
+  width: 0; /* Inicia con ancho 0 (invisible) */
+  height: 1px; /* Grosor de la línea */
+  background-color: white; /* Color de la línea */
+  transition: width 0.3s ease; /* Transición suave al hacer hover */
+}
+.container .nav-link a:hover::after {
+  width: 101%; /* Expande la línea al 100% del ancho del texto */
+}
+.container .nav-item-wrapper::after {
+  content: "";
+  top: 60px;
+  position: absolute;
+  left: 0;
+  width: 500px;
+  height: 60px;
+  background: #000;
+  margin: 0 auto;
+  transition: 1s;
+}
+.container .nav-footer {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  padding: 2em 1em;
+  display: flex;
+  justify-content: flex-end;
+}
+@media (max-width: 460px) {
+  .container .nav-footer {
+    justify-content: center;
+  }
+}
+.container .nav-footer a {
+  text-decoration: none;
+  padding: 0 1em;
+  color: #fff;
+  font-size: 12px;
+}
+
+.gallery {
+  width: 100%;
+  min-height: 100vh;
+  padding: 50px 0;
+  background-color: #023e8a;
+}
+@media (max-width: 460px) {
+  .gallery {
+    min-height: 70vh;
+  }
+}
+.gallery__title {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 80px;
+}
+.gallery__title h3 {
+  font-family: "Great Vibes";
+  font-size: 200px;
+  font-weight: 400;
+  padding: 0 80px;
+  color: white;
+  max-width: 1500px;
+}
+@media (max-width: 990px) {
+  .gallery__title h3 {
+    padding: 0;
+    margin: 0 auto;
+    font-size: 130px;
+  }
+}
+@media (max-width: 460px) {
+  .gallery__title h3 {
+    margin: 0 auto;
+    padding: 0;
+    font-size: 60px;
+  }
+}
+.gallery #slider-inner {
+  display: flex;
+  padding: 0 80px;
+  width: 100vw;
+  overflow: hidden;
+  position: relative;
+}
+@media (max-width: 460px) {
+  .gallery #slider-inner {
+    padding: 0 50px;
+  }
+}
+.gallery #slider-inner .slider {
+  display: flex;
+  flex-wrap: none;
+}
+.gallery #slider-inner .slider .g-7 {
+  padding-right: 80px;
+  position: relative;
+  width: max-content;
+  height: 50vh;
+}
+@media (max-width: 460px) {
+  .gallery #slider-inner .slider .g-7 {
+    height: 30vh;
+  }
+}
+.gallery #slider-inner .slider .g-7 .img-wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.gallery #slider-inner .slider .g-7 .img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+.gallery #slider-inner .slider .g-7 p {
+  font-size: 3vw;
+  color: #c6d6e8;
+  position: absolute;
+  bottom: 0;
+  left: 10px;
+}
+.gallery .proxy-slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
+
+.contact {
+  background-color: #023e8a;
+}
+.contact * {
+  color: white;
+}
+.contact__main {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  width: 100%;
+  padding: 100px 80px 20px;
+  gap: 70px;
+}
+@media (max-width: 1200px) {
+  .contact__main {
+    gap: 40px;
+  }
+}
+@media (max-width: 990px) {
+  .contact__main {
+    flex-direction: column;
+  }
+}
+@media (max-width: 460px) {
+  .contact__main {
+    flex-direction: column;
+    padding: 100px 50px;
+  }
+}
+@media (max-width: 990px) {
+  .contact__main__logo {
+    margin: 0 auto;
+    font-size: 40px;
+  }
+}
+.contact__main h2 {
+  font-family: "Great Vibes";
+  text-align: center;
+  font-size: 80px;
+  color: white;
+  margin-right: 150px;
+}
+@media (max-width: 1200px) {
+  .contact__main h2 {
+    margin-right: 40px;
+    font-size: 80px;
+  }
+}
+@media (max-width: 990px) {
+  .contact__main h2 {
+    margin-right: 0px;
+    font-size: 65px;
+    margin-bottom: 60px;
+  }
+}
+@media (max-width: 460px) {
+  .contact__main h2 {
+    margin: 0;
+    font-size: 50px;
+    margin-bottom: 60px;
+  }
+}
+.contact__main__links {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-direction: column;
+  gap: 20px;
+  font-size: 15px;
+}
+.contact__main__links a {
+  text-decoration: none;
+}
+.contact__footer {
+  width: 100%;
+  padding: 80px;
+}
+@media (max-width: 990px) {
+  .contact__footer {
+    padding-top: 60px;
+  }
+}
+@media (max-width: 460px) {
+  .contact__footer {
+    padding: 80px 50px;
+  }
+}
+.contact__footer__container {
+  padding: 40px 0;
+  display: flex;
+  align-items: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.4);
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  width: 100%;
+}
+.contact__footer__container button {
+  aspect-ratio: 1/1;
+  padding: 20px;
+  border-radius: 50%;
+  background-color: transparent;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  font-weight: 600;
+  outline: none;
+  text-align: center;
+  font-size: 14px;
+  cursor: pointer;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+.contact__footer__container button:hover {
+  background-color: white;
+  color: #023e8a;
+}
+
+.team {
+  display: flex;
+  flex-direction: column;
+  height: fit-content; /* Altura completa de la ventana */
+  width: 100%;
+  box-sizing: border-box;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+.team__title {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 100px 0 50px;
+}
+.team__title h3 {
+  font-family: "Great Vibes";
+  font-size: 200px;
+  font-weight: 400;
+  padding: 0 80px;
+  max-width: 1500px;
+  color: #023e8a;
+}
+@media (max-width: 990px) {
+  .team__title h3 {
+    margin: 0 auto;
+    padding: 0;
+    font-size: 130px;
+  }
+}
+@media (max-width: 460px) {
+  .team__title h3 {
+    margin: 0 auto;
+    padding: 0;
+    font-size: 60px;
+  }
+}
+.team .wrapper {
+  height: 80vh;
+}
+.team__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-grow: 1; /* Este contenedor crecerá para ocupar el espacio restante */
+  width: 100%;
+  padding: 0 80px 100px;
+  gap: 80px;
+}
+@media (max-width: 990px) {
+  .team__container {
+    flex-direction: column;
+  }
+}
+.team__container__box {
+  width: calc(33% - 80px);
+  display: flex;
+  text-align: center;
+  justify-content: center; /* Centrar la imagen horizontalmente */
+  align-items: center;
+  flex-direction: column;
+}
+@media (max-width: 990px) {
+  .team__container__box {
+    width: 100%;
+  }
+}
+.team__container__box:nth-child(odd) {
+  height: 100%;
+}
+.team__container__box:nth-child(odd) img {
+  height: 80%;
+}
+.team__container__box h5 {
+  font-family: "Great Vibes";
+  font-size: 50px;
+  font-weight: 400;
+  margin: 40px 0 10px;
+  color: #023e8a;
+}
+@media (max-width: 768px) {
+  .team__container__box h5 {
+    font-size: 45px;
+  }
+}
+.team__container__box p {
+  font-size: 20px;
+  font-weight: 600;
+}
+.team__container__box img {
+  width: 100%; /* Las imágenes ocupan el ancho de la caja */
+  height: 100%; /* Altura del 80% de la caja por defecto */
+  object-fit: cover;
+  border-radius: 50vw;
+}
+@media (max-width: 460px) {
+  .team__container__box img {
+    aspect-ratio: 1/1;
+  }
+}
+
+/*# sourceMappingURL=index.css.map */
