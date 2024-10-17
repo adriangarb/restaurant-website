@@ -61,7 +61,7 @@ body {
 .main {
   height: 100vh;
   width: 100%;
-  background-image: url("asset/home.jpg");
+  background-image: url("./asset/home.jpg");
   background-repeat: no-repeat; /* Evitar que se repita */
   background-size: cover; /* La imagen cubrirá todo el contenedor */
   background-position: center; /* Centrar la imagen */
@@ -465,7 +465,7 @@ body {
   align-items: flex-start;
   width: 50%;
   height: 100vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("asset/nav.jpg"); /* Imagen de fondo con una capa oscura encima */
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("./asset/nav.jpg"); /* Imagen de fondo con una capa oscura encima */
   background-repeat: no-repeat; /* Evitar que se repita */
   background-size: cover; /* La imagen cubrirá todo el contenedor */
   background-position: center; /* Centrar la imagen */
