@@ -465,10 +465,7 @@ body {
   align-items: flex-start;
   width: 50%;
   height: 100vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("./asset/nav.jpg") !important; /* Imagen de fondo con una capa oscura encima */
-  background-repeat: no-repeat; /* Evitar que se repita */
-  background-size: cover; /* La imagen cubrirá todo el contenedor */
-  background-position: center; /* Centrar la imagen */
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("./asset/nav.jpg") center / cover no-repeat !important;
 }
 @media (max-width: 460px) {
   .container .flex {
