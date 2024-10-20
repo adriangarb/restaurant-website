@@ -575,7 +575,7 @@ body {
                     display: flex;
                     flex-direction: column;
                     img {
-                        width: 100%;
+                        width: inherit;
                         height: 100%;
                         object-fit: cover;
                         object-position: center;
