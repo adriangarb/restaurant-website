@@ -19,8 +19,6 @@ window.onbeforeunload = function () {
 };
 document.documentElement.scrollTop = 0; // Para navegadores modernos
 document.body.scrollTop = 0; // Para navegadores más antiguos
-gsap.registerPlugin(ScrollTrigger, ScrollToPlugin, Draggable);
-const navBtn = document.getElementById("menu-toggle-btn");
 // //lenis
 const lenis = new Lenis({
   duration: 0.5,
@@ -29,6 +27,10 @@ const lenis = new Lenis({
   wrapper: document.body,
   easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
 });
+lenis.stop();
+gsap.registerPlugin(ScrollTrigger, ScrollToPlugin, Draggable);
+const navBtn = document.getElementById("menu-toggle-btn");
+
 function raf(time) {
   lenis.raf(time);
   requestAnimationFrame(raf);
@@ -77,6 +79,7 @@ tll.from(
   {
     opacity: 0,
     duration: 1,
+    onComplete: () => lenis.start(),
   },
   "<"
 );
